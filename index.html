@@ -15,7 +15,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -54,10 +55,10 @@
         function storeDataToRTDB() {
             document.getElementById('formNotAvailableText').style.display = 'block';
             setTimeout(() => {
-            document.getElementById('formNotAvailableText').style.display = 'none';
+                document.getElementById('formNotAvailableText').style.display = 'none';
             }, 3000);
         }
-  
+
         function validateAndSubmitForm() {
             // Get form input values
             const nameInput = document.getElementById('nameInputBoxInForm').value.trim();
@@ -65,7 +66,7 @@
             const commentInput = document.getElementById('commentInputBoxInForm').value.trim();
             const subjectInput = document.getElementById('subjectInputBoxInForm').value.trim();
 
-            if (nameInput === '') { 
+            if (nameInput === '') {
                 alert('Please enter your name.');
                 return;
             }
@@ -74,7 +75,7 @@
                 alert('Please enter your email.');
                 return;
             }
-            
+
             if (!isValidEmail(emailInput)) {
                 alert('Please enter a valid email address.');
                 return;
@@ -86,13 +87,13 @@
             }
             storeDataToRTDB();
         }
-        
+
         // Function to validate email format
         function isValidEmail(email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
-        
+
         // Function to handle form submission (replace with your actual logic)
         function storeDataToRTDB() {
             // Your form submission logic here
@@ -100,31 +101,32 @@
             const emailInput = document.getElementById('emailInputBoxInForm').value.trim();
             const commentInput = document.getElementById('commentInputBoxInForm').value.trim();
             const subjectInput = document.getElementById('subjectInputBoxInForm').value.trim();
-        
+
             // Push data to the 'messages' node in the 
             database.ref('messages').push({
-            name: nameInput,
-            email: emailInput,
-            subject : subjectInput,
-            comment: commentInput
+                name: nameInput,
+                email: emailInput,
+                subject: subjectInput,
+                comment: commentInput
             }).then(() => {
                 alert('Your message sent successfully.');
-                window.scroll(0,0)
+                window.scroll(0, 0)
                 document.getElementById('nameInputBoxInForm').value = '';
                 document.getElementById('emailInputBoxInForm').value = '';
                 document.getElementById('commentInputBoxInForm').value = '';
             })
-            .catch((error) => {
-                console.error('Error storing data:', error);
-                alert("Unable to send data to Database")
-            });
+                .catch((error) => {
+                    console.error('Error storing data:', error);
+                    alert("Unable to send data to Database")
+                });
         }
     </script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -133,7 +135,8 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <!-- <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary fw-bold m-0">Home</h1>
         </a> -->
@@ -171,7 +174,8 @@
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">UX/UI designer, Product Designer, Front End Developer</div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="Harikaran G Resume (1) (1).pdf" download class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                        <a href="../Hari-portfolio/img/HARIKARAN G_RESUME_2025 (2).pdf" download
+                            class="btn btn-primary py-3 px-4 me-5">Download CV</a>
                         <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -220,10 +224,14 @@
                         </div>
                         <h3 class="lh-base mb-0">of Working Experience as a UX/UI Designer & Developer</h3>
                     </div>
-                    <p class="mb-4">With 1 years of experience in UX/UI Developer, UX/UI Designer with web development experience, focused on building intuitive, scalable, and high-performance user interfaces.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Evolving with Tech – Designing, Building, Innovating.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Continuously evolving in technology</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Accuracy and Dynamic Solutions</p>
+                    <p class="mb-4">With 1 years of experience in UX/UI Developer, UX/UI Designer with web development
+                        experience, focused on building intuitive, scalable, and high-performance user interfaces.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Evolving with Tech – Designing,
+                        Building, Innovating.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Continuously evolving in
+                        technology</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Accuracy and Dynamic
+                        Solutions</p>
                     <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -258,7 +266,9 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-5 mb-5">Skills & Experience</h1>
-                    <p class="mb-4">With a strong foundation in web development and design, I bring a wealth of experience in creating innovative and user-friendly solutions. My expertise spans across various technologies, ensuring high-quality and impactful results.</p>
+                    <p class="mb-4">With a strong foundation in web development and design, I bring a wealth of
+                        experience in creating innovative and user-friendly solutions. My expertise spans across various
+                        technologies, ensuring high-quality and impactful results.</p>
                     <h3 class="mb-4">My Skills</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
@@ -268,7 +278,8 @@
                                     <h6 class="font-weight-bold">95%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
@@ -277,7 +288,8 @@
                                     <h6 class="font-weight-bold">95%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
@@ -286,7 +298,8 @@
                                     <h6 class="font-weight-bold">70%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +310,8 @@
                                     <h6 class="font-weight-bold">65%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <!-- <div class="skill mb-4">
@@ -315,7 +329,8 @@
                                     <h6 class="font-weight-bold">60%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -324,10 +339,12 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
+                                href="#tab-1">Experience</button>
                         </li>
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
+                                href="#tab-2">Education</button>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -337,19 +354,21 @@
                                     <h5>Web development trinee</h5>
                                     <hr class="text-primary my-2">
                                     <p class="text-primary mb-1">09.05.2023 - 23.11.2023</p>
-                                    <h6 class="mb-0"><a href="https://www.migritech.com/" target="_blank">In under software enginier</a></h6>
+                                    <h6 class="mb-0"><a href="" target="_blank">In under software enginier</a></h6>
                                 </div>
                                 <div class="col-sm-6">
                                     <h5>UX/UI intern</h5>
                                     <hr class="text-primary my-2">
                                     <p class="text-primary mb-1">15.12.2023 - 15.06.2024</p>
-                                    <h6 class="mb-0"><a href="https://www.volantetech.com/" target="_blank">Migri technologies</a></h6>
+                                    <h6 class="mb-0"><a href="https://www.thesisflow.com/" target="_blank">Migri
+                                            technologies</a></h6>
                                 </div>
                                 <div class="col-sm-6">
                                     <h5>Full time UX/UI designer & product designer</h5>
                                     <hr class="text-primary my-2">
                                     <p class="text-primary mb-1">2025 - Present</p>
-                                    <h6 class="mb-0">Migri technologies</h6>
+                                    <h6 class="mb-0"><a href="https://www.thesisflow.com/" target="_blank">Migri
+                                            technologies</a></h6>
                                 </div>
                                 <!-- <div class="col-sm-6">
                                     <h5>Apps Designer</h5>
@@ -416,7 +435,8 @@
                         <div class="ms-sm-4">
                             <h4 class="mb-3">Thesis Flow as a Designer</h4>
                             <h6 class="mb-3">Start from <span class="text-primary">2024 - 2025</span></h6>
-                            <span>Lead Designer for a global top-tier institution’s peer review system. Full product design done by me currently, only the pre-booking module is live.
+                            <span>Lead Designer for a global top-tier institution’s peer review system. Full product
+                                design done by me currently, only the pre-booking module is live.
 
                             </span>
                         </div>
@@ -434,10 +454,11 @@
                         <div class="ms-sm-4">
                             <h4 class="mb-3">Learning Projects (Web Development Focus)</h4>
                             <h6 class="mb-3">Start from <span class="text-primary">2023</span></h6>
-                            <span>Responsive Bicycle Website built with HTML, CSS, JS, and Firebase. Includes product listing, filters, and clean UI.</span>
+                            <span>Responsive Bicycle Website built with HTML, CSS, JS, and Firebase. Includes product
+                                listing, filters, and clean UI.</span>
                         </div>
                     </div>
-                    <a href="https://ruralyouth.in/" target="_blank">
+                    <a href="https://github.com/Harikaran-GHK123/Bicycle-e-cart-website" target="_blank">
                         <div class="btn btn-primary w-100" style="margin-top: -50px;">Link Here</div>
                     </a>
                 </div>
@@ -450,205 +471,233 @@
                         <div class="ms-sm-4">
                             <h4 class="mb-3">Learning Projects (Web Development Focus)</h4>
                             <h6 class="mb-3">Start from <span class="text-primary">2023</span></h6>
-                            <span>A simple service booking system where users can request services, choose time slots, and receive confirmations. Built to practice backend logic, form handling, and real-world workflows.</span>
+                            <span>A simple service booking system where users can request services, choose time slots,
+                                and receive confirmations. Built to practice backend logic, form handling, and
+                                real-world workflows.</span>
                         </div>
                     </div>
-                    <a href="https://fac.iitg.ac.in/kanagaraj/home" target="_blank">
+                    <a href="https://github.com/Harikaran-GHK123/Workshop-service-booking" target="_blank">
                         <div class="btn btn-primary w-100" style="margin-top: -50px;">Link Here</div>
                     </a>
                 </div>
 
             </div>
         </div>
-    <!-- Service End -->
+        <!-- Service End -->
 
-    <!-- skills section -->
-    <!-- Experience Start -->
-    <div class="experience" id="experience">
-        <div class="container">
-            <header class="section-header text-center wow zoomIn mb-5" data-wow-delay="0.1s">
-                <p>My Skills Section</p>
-                <h2>What I Will Do!</h2>
-            </header>
-            <div class="timeline">
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">2023</div>
-                        <h2>Frontend Development (learner/workout)</h2>
-                        <h4>Frontend</h4>
-                        <p>
-                            Expertise in HTML, CSS, JavaScript, TypeScript, Angular, React, Bootstrap, and responsive web design. Proficient in creating dynamic and user-friendly interfaces.
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">2023 - After web dev learning</div>
-                        <h2>Front end development</h2>
-                        <h4>Workout projects for showcase</h4>
-                        <p>
-                            Developed a responsive Bicycle Website and a Workshop Service Booking platform as part of my web development learning, focusing on front-end design, form handling, real-world workflows, and Firebase integration.
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">2024 - Present</div>
-                        <h2>Designer</h2>
-                        <h4>Intern in migri technologies</h4>
-                        <p>
-                            UX/UI Intern at Migri Technologies – Designed web/mobile UIs, wireframes, and prototypes in Figma; collaborated on live projects.
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">2025 - present</div>
-                        <h2>After intern me as a fulltime employee</h2>
-                        <h4>UX/UI designer & product analysist</h4>
-                        <p>
-                           Full-time UX/UI Designer & Product Analyst – Driving user experience and product success through design, research, and strategic analysis.
-                        </p>
-                    </div>
-                </div>
-              
-            </div>
-        </div>
-    </div>
-    <!-- Job Experience End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
-        <div class="container-fluid py-5">
-            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="testimonial-left h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Congratulations to the talented web developer for their outstanding work and dedication! - Sriram</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Sriram</h5>
-                            <span>Full stack developer</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Kudos to the exceptional web developer for their remarkable skills and dedication! - Ajith kumar</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Ajith</h5>
-                            <span>Ful stack developer</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">A big congratulations to the web developer for their exceptional talent and dedication! - Jeeva</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Jeeva</h5>
-                            <span>---</span>
+        <!-- skills section -->
+        <!-- Experience Start -->
+        <div class="experience" id="experience">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn mb-5" data-wow-delay="0.1s">
+                    <p>My Skills Section</p>
+                    <h2>What I Will Do!</h2>
+                </header>
+                <div class="timeline">
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2023</div>
+                            <h2>Frontend Development (learner/workout)</h2>
+                            <h4>Frontend</h4>
+                            <p>
+                                Expertise in HTML, CSS, JavaScript, TypeScript, Angular, React, Bootstrap, and
+                                responsive web design. Proficient in creating dynamic and user-friendly interfaces.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="testimonial-right h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2023 - After web dev learning</div>
+                            <h2>Front end development</h2>
+                            <h4>Workout projects for showcase</h4>
+                            <p>
+                                Developed a responsive Bicycle Website and a Workshop Service Booking platform as part
+                                of my web development learning, focusing on front-end design, form handling, real-world
+                                workflows, and Firebase integration.
+                            </p>
+                        </div>
                     </div>
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2024 - Present</div>
+                            <h2>Designer</h2>
+                            <h4>Intern in migri technologies</h4>
+                            <p>
+                                UX/UI Intern at Migri Technologies – Designed web/mobile UIs, wireframes, and prototypes
+                                in Figma; collaborated on live projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2025 - present</div>
+                            <h2>After intern me as a fulltime employee</h2>
+                            <h4>UX/UI designer & product analysist</h4>
+                            <p>
+                                Full-time UX/UI Designer & Product Analyst – Driving user experience and product success
+                                through design, research, and strategic analysis.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
+        <!-- Job Experience End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-        <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <!-- <a class="btn btn-primary py-3 px-5" href="">Say Hello</a> -->
-                </div>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="mb-2">Address:</p>
-                    <h3 class="fw-bold">Emmaper school street ,kallakuruchi</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold"><a href="tel:918608220198">+91 8778000240</a></h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold"><a href="mailto:gobinathrajendhiran@gmail.com">hkkallai8778@gmail.com</a></h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Follow me:</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://x.com/GobinathRV7?t=p-QP0w2OZjYNvI3X8kXZPw&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/profile.php?id=100018044648442" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/gobinathrajendhiranmeanstackdev2000/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/GobinathRajendhiran" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Testimonial Start -->
+        <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="testimonial-left h-100">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.1s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.3s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.5s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" id="nameInputBoxInForm" class="form-control" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="owl-carousel testimonial-carousel">
+                            <div class="testimonial-item text-center">
+                                <div class="position-relative mb-5">
+                                    <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto"
+                                        src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                                    <div class="testimonial-icon">
+                                        <i class="fa fa-quote-left text-primary"></i>
+                                    </div>
                                 </div>
+                                <p class="fs-5 fst-italic">Congratulations to the talented web developer for their
+                                    outstanding work and dedication! - Sriram</p>
+                                <hr class="w-25 mx-auto">
+                                <h5>Sriram</h5>
+                                <span>Full stack developer</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="emailInputBoxInForm" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                            <div class="testimonial-item text-center">
+                                <div class="position-relative mb-5">
+                                    <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto"
+                                        src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                                    <div class="testimonial-icon">
+                                        <i class="fa fa-quote-left text-primary"></i>
+                                    </div>
                                 </div>
+                                <p class="fs-5 fst-italic">Kudos to the exceptional web developer for their remarkable
+                                    skills and dedication! - Ajith kumar</p>
+                                <hr class="w-25 mx-auto">
+                                <h5>Ajith</h5>
+                                <span>Ful stack developer</span>
                             </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" id="subjectInputBoxInForm" class="form-control" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                            <div class="testimonial-item text-center">
+                                <div class="position-relative mb-5">
+                                    <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto"
+                                        src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                                    <div class="testimonial-icon">
+                                        <i class="fa fa-quote-left text-primary"></i>
+                                    </div>
                                 </div>
+                                <p class="fs-5 fst-italic">A big congratulations to the web developer for their
+                                    exceptional talent and dedication! - Jeeva</p>
+                                <hr class="w-25 mx-auto">
+                                <h5>Jeeva</h5>
+                                <span>---</span>
                             </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="commentInputBoxInForm" placeholder="Leave a message here" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" onclick="validateAndSubmitForm()">Send Message</button>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="testimonial-right h-100">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.1s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.3s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
+                            <img class="img-fluid wow fadeIn" data-wow-delay="0.5s"
+                                src="img/403019_avatar_male_man_person_user_icon.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-xxl pb-5" id="contact">
+            <div class="container py-5">
+                <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-6">
+                        <h1 class="display-5 mb-0">Let's Work Together</h1>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <!-- <a class="btn btn-primary py-3 px-5" href="">Say Hello</a> -->
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="mb-2">Address:</p>
+                        <h3 class="fw-bold">Emmaper school street ,kallakuruchi</h3>
+                        <hr class="w-100">
+                        <p class="mb-2">Call me:</p>
+                        <h3 class="fw-bold"><a href="tel:918608220198">+91 8778000240</a></h3>
+                        <hr class="w-100">
+                        <p class="mb-2">Mail me:</p>
+                        <h3 class="fw-bold"><a href="mailto:gobinathrajendhiran@gmail.com">hkkallai8778@gmail.com</a>
+                        </h3>
+                        <hr class="w-100">
+                        <p class="mb-2">Follow me:</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/share/1CF5AxDLtW/"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary me-2"
+                                href="https://www.linkedin.com/in/hari-karan-4503b0292/" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-square btn-primary me-2" href="https://github.com/Harikaran-GHK123"
+                                target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" id="nameInputBoxInForm" class="form-control"
+                                            placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="emailInputBoxInForm"
+                                            placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" id="subjectInputBoxInForm" class="form-control"
+                                            placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="commentInputBoxInForm"
+                                            placeholder="Leave a message here" style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary py-3 px-5" onclick="validateAndSubmitForm()">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Contact End -->
 
@@ -657,9 +706,9 @@
         <div class="container-xxl pt-5 px-0">
             <div class="bg-dark">
                 <iframe
-                src="https://www.google.com/search?q=kallakurichi&rlz=1C1VDKB_enIN1119IN1119&oq=kallakurichi&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMg8IARAuGBQYhwIYsQMYgAQyBggCECMYJzIPCAMQABgUGIcCGLEDGIAEMg0IBBAuGJECGIAEGIoFMgYIBRBFGD0yBggGEEUYPTIGCAcQRRg90gEIMzAxN2owajeoAgiwAgHxBfyzRENIKb_l8QX8s0RDSCm_5Q&sourceid=chrome&ie=UTF-8"
-                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28280.839395280196!2d78.9705795!3d11.73555925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab66e5dfc2508d%3A0xb773491d8d92cdff!2sKallakurichi%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1749485585741!5m2!1sen!2sin"
+                    width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
